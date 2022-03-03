@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Sample Portfolio</title>
+</head>
+<body>
+    <!-- we need to create 6 sections 
+    1. header (banner)
+    2. navigation bar
+    3. about
+    4. skills
+    5. contacts
+    6. footer
+    -->
+
+    <!-- things to prepare 
+    1. type of font family
+    2. look for redundancy
+        if the code is repeating many times then make a ready made code for it  
+    3. logos
+    4. icons
+    5. images
+    -->
+    <!-- banner -->
+    <header class="header center" id="home">
+        <h1><b>I'am</b> A Web Developer</h1>
+    </header>
+    <!-- navigations -->
+    <div class="nav">
+        <ul class="wrapper">
+            <li><a href="#home" id="current">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+    </div>
+    <!-- about -->
+    <section id="about" class="wrapper">
+       
+        <div class="about-grid">
+            <div class="about-img">
+                <img src="{{url_for('static', filename='images/my_pic.jpg')}}" alt="">
+            </div>
+            <div class="about-content">
+                <h2>About me</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, optio. Ab officia nulla tempora? Beatae atque laborum alias quaerat animi dolore autem odio, voluptatibus sed maxime! Natus ipsam, maxime magni rem at sequi voluptatum quae doloremque, ut vitae voluptates, soluta voluptas voluptate dolore ratione sint beatae distinctio illum quaerat autem.</p>
+            </div>
+        </div>
+    </section>
+    <!-- skills -->
+    <section id="skills" class='wrapper'>
+        <h2>My Skills</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Year I learned</th>
+                    <th>Language</th>
+                    <th>level</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2020</td>
+                    <td>C</td>
+                    <td>5%</td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>C++</td>
+                    <td>5%</td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>HTML</td>
+                    <td>20%</td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>CSS</td>
+                    <td>20%</td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>Python</td>
+                    <td>30%</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- contacts -->
+    <section id="contacts" class="wrapper">
+        <h2>Get In Touch</h2>
+        <!-- icons -->
+        <ul>
+            <li><a href="#">
+                <img src="/static/icons/facebook.png" alt="">
+            </a></li>
+            <li><a href="#">
+                <img src="/static/icons/github.png" alt="">
+            </a></li>
+            <li><a href="#">
+                <img src="/static/icons/gmail.png" alt="">
+            </a></li>
+            <li><a href="#">
+                <img src="/static/icons/messenger.png" alt="">
+            </a></li>
+        </ul>
+        <!-- Forms -->
+        <div class="contact-form">
+            <form action="#" method="post">
+                <!-- 
+                1. Name
+                2. email
+                3. contacts
+                4. text area
+                5. submit button
+                     -->
+                <label for="name">Fullname</label> 
+                <input type="text" name="name" > 
+
+                <label for="email">Email</label>
+                <input type="email" name="email" > 
+                
+                <label for="contacts">Contacts</label>
+                <input type="number" name="contact" > 
+
+                <label for="message">Message Us</label>
+                <textarea name="message" cols="30" rows="5"></textarea> 
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="wrapper">
+            <p>&#169;copyright 2022</p>
+            <p>Code and Design by Marvin C. Madera</p>
+        </div>
+       
+    </footer>
+</body>
+</html>
